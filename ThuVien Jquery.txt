@@ -1,0 +1,32 @@
+Dùng CDN JQuery ( tìm google )
+dùng cdn waypoints (tìm google )
+counting up to number jquery ( cái này dùng để chạy chữ )
+https://www.jqueryscript.net/other/Counting-Up-To-Numerical-Values-On-Scroll-jQuery-Countup-js.html
+thư viện lightbox 
+https://lokeshdhakar.com/projects/lightbox2/
+
+thư viện carourel 
+
+https://idangero.us/swiper/demos/
+https://kenwheeler.github.io/slick/
+https://owlcarousel2.github.io/OwlCarousel2/
+
+thư viện back to top 
+
+https://codyhouse.co/gem/back-to-top
+
+thư viện wowks 
+
+http://wowks.uk/
+
+thư viện animate.css 
+
+https://daneden.github.io/animate.css/
+
+hover css 
+
+https://ianlunn.github.io/Hover/
+
+wowslider 
+
+http://wowslider.com/slider-js-utter-blinds-demo.html
