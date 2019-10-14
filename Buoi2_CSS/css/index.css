@@ -1,0 +1,144 @@
+/* GLOBAL */
+*{
+    box-sizing: border-box;
+}
+.clear{
+    clear: both;
+}
+
+/* HEADER */
+.header img{
+    width: 150px;
+}
+
+/* NAVBAR */
+.navbar{
+    background-color: black;
+}
+.navbar ul li{
+    display: inline;
+    margin: 0px 20px;
+    padding: 0 10px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+}
+.navbar ul{
+    list-style: none;
+    padding: 10px;
+}
+
+/* CAROUCEL */
+.caroucel{
+    background-image: url('../img/slider_1.jpg');
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/* INTRO */
+.intro__text{
+    text-indent: 40px;
+    text-align:justify; /* letter-spacing: 1px; khoang cach giua các ky tu */
+}
+.intro__text a{
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+.intro__product__left,
+.intro__product__right{
+    float: left;
+    width: 50%;
+}
+.intro__product__items{
+    float: left;
+    padding: 10px;
+    display: block
+}
+.intro__product__items-1{
+    width: 50%;
+}
+.intro__product__items-2{
+    width: 100%;
+}
+.intro__product__items img{
+    width: 100%;
+    display: block;
+}
+
+/* PRODUCTS */
+.products__items{
+    float: left;
+    width: 25%;
+    padding: 10px;
+    display: block;
+}
+.products__items img{
+    width: 100%;
+}
+.products__items button{
+    background-color: rgb(216, 41, 41);
+    border-radius: 3px;
+    border-color: white;
+    color: white;
+    font-size: 12px;
+    border: 0px;
+}
+.products h1{
+    text-align: center;
+}
+
+/* BANNER */
+.banner{
+    height: 400px;
+    background-image: url('../img/nature.jpg');
+    background-size: cover;
+    position: relative;
+}
+.saleoff{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: rgba(255,0,0,0.6);
+    position: absolute;
+    top: 10%;
+    left: 15%;
+}
+.banner p:nth-child(2){
+    font-size: 50px;
+    margin: 10px 0;
+}
+.saleoff h2, .saleoff p{
+    color: white;
+    text-align: center;
+}
+.saleoff h2{
+    margin-top: 70px;
+}
+/* SERVICES */
+.services{
+    width: 70%;
+    margin: 20px auto;
+}
+.services__items{
+    width: 33.333333%;
+    float: left;
+    text-align: center;
+}
+.services__items i{
+    font-size: 40px;
+    color: black;
+}
+/* FOOTER */
+.footer{
+    background-color: black;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+}
+.footer h2, .footer p{
+    color: white;
+    text-align: center;
+}

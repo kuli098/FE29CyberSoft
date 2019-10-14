@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Movie</title>
+</head>
+
+<body>
+    <header class="movieHeader">
+        <p class="container text-white text-right mb-0">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            <span class="mx-3 pr-2 border-right">0924444740</span>
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </p>
+        <nav class="container header__movie navbar navbar-expand-lg navbar-dark pt-0">
+            <a class="navbar-brand" href="#"><img src="./images/logo.svg" alt="logoMovie"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#movie"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="movie">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">WHAT'S ON</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SHORSTCODES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">NEW</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="modal" data-target="#exampleModal" href="#">SIGN IN</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header -->
+    <section class="movieCarousel">
+        <div id="movieSlider" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="container carousel-indicators">
+                <li data-target="#movieSlider" data-slide-to="0" class="active"></li>
+                <li data-target="#movieSlider" data-slide-to="1"></li>
+                <li data-target="#movieSlider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/hero-1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-item__overlay"></div>
+                    <div class="container carousel-caption d-none d-md-block">
+                        <span class="title">ACTION, ADVENTURE, FANTASY</span>
+                        <h1>End of the World: Part I</h1>
+                        <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum
+                            est notare quam littera gothica, quam nunc putamus parum.</p>
+                        <div class="carousel-item__trailer">
+                            <span class="mr-3 rounded-circle text-center">PG</span>
+                            <button><i class="fa fa-play mr-2" aria-hidden="true"></i>PLAY TRAILER</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/hero-2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-item__overlay"></div>
+                    <div class="container carousel-caption d-none d-md-block">
+                        <span class="title">ACTION, ADVENTURE, FANTASY</span>
+                        <h1>End of the World: Part II</h1>
+                        <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum
+                            est notare quam littera gothica, quam nunc putamus parum.</p>
+                        <div class="carousel-item__trailer">
+                            <span class="mr-3 rounded-circle text-center">15</span>
+                            <button><i class="fa fa-play mr-2" aria-hidden="true"></i>PLAY TRAILER</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/hero-3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-item__overlay"></div>
+                    <div class="container carousel-caption d-none d-md-block">
+                        <span class="title">ACTION, ADVENTURE, FANTASY</span>
+                        <h1>End of the World: Part III</h1>
+                        <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum
+                            est notare quam littera gothica, quam nunc putamus parum.</p>
+                        <div class="carousel-item__trailer">
+                            <span class="mr-3 rounded-circle text-center">PG</span>
+                            <button><i class="fa fa-play mr-2" aria-hidden="true"></i>PLAY TRAILER</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Carousel -->
+    <section class="newin">
+        <h1>NEW IN</h1>
+        <div class="newin__content container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="newin__img">
+                        <img src="./images/movie-1.jpg" alt="" class="img-fluid">
+                        <div class="newin__overlay"></div>
+                        <div class="newin__play">
+                            <div>
+                                <p><i class="fa fa-play" aria-hidden="true"></i></p>
+                                <a href="#">READ MORE</a>
+                                <p>Released: 7 Mar, 2017</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newin__detail">
+                        <p>The last post</p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="newin__img">
+                        <img src="./images/movie-1.jpg" alt="" class="img-fluid">
+                        <div class="newin__overlay"></div>
+                        <div class="newin__play">
+                            <div>
+                                <p><i class="fa fa-play" aria-hidden="true"></i></p>
+                                <a href="#">READ MORE</a>
+                                <p>Released: 7 Mar, 2017</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newin__detail">
+                        <p>The last post</p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="newin__img">
+                        <img src="./images/movie-1.jpg" alt="" class="img-fluid">
+                        <div class="newin__overlay"></div>
+                        <div class="newin__play">
+                            <div>
+                                <p><i class="fa fa-play" aria-hidden="true"></i></p>
+                                <a href="#">READ MORE</a>
+                                <p>Released: 7 Mar, 2017</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newin__detail">
+                        <p>The last post</p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="newin__img">
+                        <img src="./images/movie-1.jpg" alt="" class="img-fluid">
+                        <div class="newin__overlay"></div>
+                        <div class="newin__play">
+                            <div>
+                                <p><i class="fa fa-play" aria-hidden="true"></i></p>
+                                <a href="#">READ MORE</a>
+                                <p>Released: 7 Mar, 2017</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newin__detail">
+                        <p>The last post</p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="showtimes container">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#MON" role="tab" aria-controls="home"
+                    aria-selected="true">MON</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#TUE" role="tab" aria-controls="profile"
+                    aria-selected="false">TUE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#TODAY" role="tab" aria-controls="contact"
+                    aria-selected="false">TODAY</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#THU" role="tab" aria-controls="contact"
+                    aria-selected="false">THU</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#FRI" role="tab" aria-controls="contact"
+                    aria-selected="false">FRI</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#SAT" role="tab" aria-controls="contact"
+                    aria-selected="false">SAT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#SUN" role="tab" aria-controls="contact"
+                    aria-selected="false">SUN</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="MON" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row">
+                    <div class="col-12 col-md-2">
+                        <img src="./images/movie-6.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-12 col-md-10">
+                        <span>ACTION, ADVENTURE, FANTASY</span>
+                        <h3>It's over</h3>
+                        <p>European mercenaries searching for black powder become embroiled in the defense of It's over
+                            of China against a horde of monstrous creatures.</p>
+                        <a href="#">FULL SYNOPSIS</a>
+                        <div class="row">
+                            <div class="col-6">
+                                <span>VIEWING TIMES</span>
+                                <button type="button" class="btn btn-secondary">14:45</button>
+                                <button type="button" class="btn btn-secondary">14:45</button>
+                                <button type="button" class="btn btn-secondary">14:45</button>
+                                <button type="button" class="btn btn-secondary">14:45</button>
+                            </div>
+                            <div class="col-6 text-right">
+                                <p>105 MINS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="TUE" role="tabpanel" aria-labelledby="profile-tab">Tussss</div>
+            <div class="tab-pane fade" id="TODAY" role="tabpanel" aria-labelledby="contact-tab">a</div>
+            <div class="tab-pane fade" id="THU" role="tabpanel" aria-labelledby="contact-tab">b</div>
+            <div class="tab-pane fade" id="FRI" role="tabpanel" aria-labelledby="contact-tab">c</div>
+            <div class="tab-pane fade" id="SAT" role="tabpanel" aria-labelledby="contact-tab">d</div>
+            <div class="tab-pane fade" id="SUN" role="tabpanel" aria-labelledby="contact-tab">e</div>
+        </div>
+    </section>
+    <section class="comingsoon">
+    </section>
+    <secion class="contact"></secion>
+    <footer class="movieFooter"></footer>
+    <div class="moldal">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    placeholder="Password">
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">LogIn</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

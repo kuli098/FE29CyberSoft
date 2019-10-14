@@ -1,0 +1,31 @@
+@mixin text ($color,$fs,$fw){
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+@mixin button($f-s, $color, $bg-color, $border-color, $border-darius, $fw, $bg-color-hover, $color-hover) {
+    font-size: $f-s;
+    color: $color;
+    background-color: $bg-color;
+    font-weight: $fw;
+    border: 2px solid $border-color;
+    border-radius: $border-darius;
+    &:hover{
+        background-color: $bg-color-hover;
+        color: $color-hover;
+        border: 2px solid $border-color;
+    }
+}
+
+@mixin reponsive ($screen){
+    @if map-has-key($map: $breakpoints, $key: $screen){
+        $value: map-get($map: $breakpoints, $key: $screen);
+        @media screen and (max-width:$value){
+            @content;
+        }
+    }
+    @else{
+        @warn "{$screen} khong ton tai"
+    }
+}
+

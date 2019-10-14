@@ -1,0 +1,28 @@
+.button{
+    .btn__red{
+        @include button($fs-14, $color-white-0, $color-red-0, $color-red-0, $border-radius, $fw-bold-0, $color-white-0, $color-red-0);
+    }
+    .btn__red_white{
+        @include button($fs-14, $color-red-0, $color-white-0, $color-red-0, $border-radius, $fw-bold-0, $color-red-0, $color-white-0);
+    }
+    .btn__red_white1{
+        @include button($fs-14, $color-white-0, $color-red-0, $color-white-0, $border-radius, $fw-bold-0, $color-white-0, $color-red-0);
+    }
+    .btn__blue{
+        @include button($fs-14, $color-white-0, $color-blue-0, $color-blue-0, $border-radius, $fw-bold-0, $color-white-0, $color-blue-0);
+    }
+    .btn__blue-1{
+        @include button($fs-14, $color-white-0, $color-blue-1, $color-blue-1, $border-radius, $fw-bold-0, $color-white-0, $color-blue-1);
+    }
+    .btn__blue-transparent{
+        @include button($fs-14, $color-white-0, $color-blue-1, $color-blue-1, $border-radius, $fw-bold-0, $color-transparent, $color-blue-1);
+    }
+}
+.button_1{
+    .btn__blue_white{
+        @include button($fs-14, $color-white-0, $color-blue-0, $color-white-0, $border-radius, $fw-bold-0, $color-white-0, $color-blue-0);
+    }
+    .btn__blue_white1{
+        @include button($fs-14, $color-blue-1, $color-white-0, $color-blue-1, $border-radius, $fw-bold-0, $color-blue-1, $color-white-0);
+    }
+}

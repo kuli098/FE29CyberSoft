@@ -1,0 +1,5 @@
+.myButton{
+    .button__white{
+        @include button($color-gray-0, $transparent, $color-gray-0, $fw-bold-0, $color-green-2, $color-white-0, $color-green-2)
+    }
+}

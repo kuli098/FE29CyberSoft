@@ -1,0 +1,91 @@
+.myCarousel{
+    .carousel-indicators{
+        position: absolute;
+        left: 0;
+        bottom: -10%;
+        li{
+            // background-color: $color-white-0;
+            // opacity: 0.25;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            margin: 0 $mg-8;
+        }
+        .active{
+            background-color: $color-blue-0;
+            opacity: 1;
+        }
+    }
+    .carousel-inner{
+        .carousel-caption_blue {
+            padding: 0;
+            position: absolute;
+            bottom: 0;
+            h5{
+                @include text($color-blue-5, $fs-24, $fw-bold-0);
+                padding: 0;
+                a{
+                    @include text($color-blue-1, $fs-10, $fw-bold-0);
+                }
+            }
+            button{
+                margin-bottom: $mg-10;
+            }
+            p{
+                @include text($color-blue-5, $fs-10, $fw-0);
+                background-color: $bg-color-0;
+                padding: $pd-5;
+                width: 25%;
+                margin: auto;
+            }
+        }
+        .carousel-caption_white{
+            padding: 0;
+            position: absolute;
+            bottom: 0;
+            h5{
+                @include text($color-white-0, $fs-24, $fw-bold-0);
+                padding: 0;
+                a{
+                    @include text($color-blue-1, $fs-10, $fw-bold-0);
+                }
+            }
+            button{
+                margin-bottom: $mg-10;
+            }
+            p{
+                @include text($color-white-0, $fs-10, $fw-0);
+                padding: $pd-5;
+                margin: 0;
+            }
+        }
+    }
+    .carousel{
+        .carousel-control-prev, .carousel-control-next{
+            width: 2%;
+            opacity: 0.8;
+            span{
+                @include text($color-blue-5, $fs-24 + 20, $fw-normal);
+                width: 100%;
+                height: 80px;
+                background: $bg-color-1;
+                &:hover{
+                    @include text($color-blue-0, $fs-24 + 20, $fw-normal);
+                }
+                i{
+                    padding: $pd-15 0;
+                }
+            }
+        }
+        .btn_left{
+            left: 0;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .btn_right{
+            right: 0;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+    }
+}

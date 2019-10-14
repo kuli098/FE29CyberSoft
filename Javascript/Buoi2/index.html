@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Tính Tiền TIP</h3>
+    <p>Tổng tiền thanh toán</p>
+    <input type="text" id="tongtien" placeholder="Tổng Tiền">
+    <p>bạn muốn tip bao nhiêu</p>
+    <select id="phantramtip">
+        <option value="30">30%</option>
+        <option value="20">20%</option>
+        <option value="15">15%</option>
+        <option value="10">10%</option>
+        <option value="5">5%</option>
+    </select>
+    <p>Muốn share bao nhiêu người</p>
+    <input type="text" id="songuoi" placeholder="Số người">
+    <button id="tinhtien">Tính nào</button> <br>
+    <div id="ketqua" style="display: none">
+        <p>tip amout</p>
+        <p id="sotienmoinguoi"></p>
+        <p>Moi nguoi</p>
+    </div>
+    <hr>
+
+    <h2>TÍNH CƯỚC UBER</h2>
+    <p>Vui lòng chọn loại xe</p>
+    <div class="sinhVien"></div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

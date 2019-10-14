@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Bài tập ajax</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="card text-white bg-dark">
+        <div class="card-header bg-dark text-white">
+            Quản lý khóa học
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <div class="form-group row">
+                    <div class="col-6">
+                        <h4 class="card-title">Mã Khóa học</h4>
+                        <input type="text" class="form-control" id="MaKhoaHoc">
+                    </div>
+                    <div class="col-6">
+                        <h4 class="card-title">Tên khóa học</h4>
+                        <input type="text" class="form-control" id="TenKhoaHoc">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-6">
+                        <h4 class="card-title">mô tả</h4>
+                        <input type="text" class="form-control" id="MoTa">
+                    </div>
+                    <div class="col-6">
+                        <h4 class="card-title">hình ảnh</h4>
+                        <input type="text" class="form-control" id="HinhAnh">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-6">
+                        <h4 class="card-title">lượt xem</h4>
+                        <input type="text" class="form-control" id="LuotXem">
+                    </div>
+                    <div class="col-6">
+                        <h3>người tạo</h3>
+                        <select id="NguoiTao" class="form-control">
+                            <option value="">__Chọn người tạo</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-right">
+                        <button class="btn btn-danger" id="btnThemKhoaHoc">Thêm Khóa Học</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="contentTable">
+
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- JS FILE -->
+    <script src="./Models/KhoaHoc.js"></script>
+    <script src="./Models/NguoiDung.js"></script>
+    <script src="./Services/KhoaHocService.js"></script>
+    <script src="./Services/NguoiDungServices.js"></script>
+
+    <script src="./Controllers/index.js"></script>
+</body>
+
+</html>

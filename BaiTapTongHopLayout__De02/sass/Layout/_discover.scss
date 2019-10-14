@@ -1,0 +1,184 @@
+.discover{
+    background-color: $bg-color-2;
+    text-align: center;
+    padding-top: $pd-35;
+    h3{
+        @include text($color-blue-2, $fs-60, $fw-0);
+        margin: 0;
+    }
+    p{
+        @include text($color-blue-2, $fs-14, $fw-0);
+    }
+    .discover__content{
+        width: 90%;
+        margin:auto;
+        .row{
+            .col-md-4{
+                padding: 0 $pd-5;
+            }
+            .card{
+                width: 100%;
+                height: 100%;
+                box-shadow: 0 4px 15px 0 rgba(0,0,0,.08);
+                border:0;
+                .discover__img{
+                    background-image: url('../Images/discover1.jpg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: relative;
+                    width: 100%;
+                    height: 200px;
+                }
+                .discover__caption{
+                    text-align: center;
+                    align-items: center;
+                    padding: $pd-35 + 15 $pd-35 $pd-35;
+                    h5{
+                        @include text($color-blue-2, $fs-18, $fw-bold-0);
+                    }
+                    p{
+                        @include text($color-blue-2, $fs-14, $fw-normal);
+                    }
+                    a{
+                        @include text($color-blue-0, $fs-14, $fw-bold);
+                        text-decoration: none;
+                        &:hover{
+                            @include text($color-blue-2, $fs-14, $fw-bold);
+                        }
+                    }
+                }
+                img{
+                    width: 100%;
+                }
+                i{
+                    @include text($color-blue-0, $fs-24 + 6, $fw-bold);
+                }
+                .card__content{
+                    text-align: left;
+                    padding: 60px 20px;
+                    .card_logo{
+                        padding: 0;
+                    }
+                    .card_link{
+                        p:nth-child(1){
+                            margin: 0;
+                            a{
+                                @include text($color-blue-0, $fs-14, $fw-bold);
+                                text-decoration: none;
+                                &:hover{
+                                    @include text($color-blue-2, $fs-14, $fw-bold);
+                                }
+                            }
+                         }
+                         p:nth-child(2){
+                             margin: 0;
+                             a{
+                                @include text($color-blue-0, $fs-14, $fw-normal);
+                                text-decoration: none;
+                                &:hover{
+                                @include text($color-blue-2, $fs-14, $fw-normal);
+                                }
+                             }
+                         }
+                        }
+                    }
+                    p{
+                        @include text($color-blue-2, $fs-18, $fw-normal);
+                    }
+                .discover__caption0{
+                    p:nth-child(1){
+                        a{
+                            @include text($color-blue-0, $fs-14, $fw-bold);
+                            text-decoration: none;
+                            &:hover{
+                                @include text($color-blue-2, $fs-14, $fw-bold);
+                            }
+                        }
+                    }
+                    p:nth-child(2){
+                        a{
+                            @include text($color-blue-0, $fs-14, $fw-normal);
+                            text-decoration: none;
+                            &:hover{
+                                @include text($color-blue-2, $fs-14, $fw-normal);
+                            }
+                        }
+                    }
+                }
+                .discover__caption1{
+                    a{
+                        @include text($color-blue-0, $fs-18, $fw-normal);
+                        text-decoration: none;
+                        &:hover{
+                            @include text($color-blue-2, $fs-18, $fw-normal);
+                        }
+                    }
+                    .card__time{
+                        @include text($color-blue-0, $fs-12, $fw-normal);
+                        &:hover{
+                            @include text($color-blue-2, $fs-12, $fw-normal);
+                        }
+                    }
+                    .discover__social{
+                        a{
+                            @include text($color-blue-0, $fs-12, $fw-normal);
+                            &:hover{
+                                @include text($color-blue-2, $fs-12, $fw-normal);
+                            }
+                            i{
+                                font-size: 15px;
+                                padding: 0 10px;
+                                &:hover{
+                                    font-weight: $fw-bold;
+                                    color: $color-blue-2;
+                                }
+                            }
+                        }
+                    }
+                }
+                .caption_{
+                    align-items: center;
+                    bottom: 10px;
+                    left: 50%;
+                    position: absolute;
+                    transform: translateX(-50%);
+                }
+            }
+            @include reponsive('extra-large-0'){
+                .card{
+                    .discover__img{
+                        width: 100%;
+                        height: 300px;
+                    }
+                }
+            }
+            @include reponsive('extra-large-1'){
+                .card{
+                    .discover__img{
+                        width: 100%;
+                        height: 200px;
+                    }
+                }
+            }
+            @include reponsive('extra-large-2'){
+                .card{
+                    .discover__img{
+                        width: 100%;
+                        height: 150px;
+                    }
+                }
+            }
+            @include reponsive('large'){
+                .card{
+                    .discover__img{
+                        width: 100%;
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+    .discover__button{
+        padding: 35px 0;
+    }
+}

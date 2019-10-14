@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,500,600,700,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <!-- bootrap4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <title>Bai Tap Bootrap4</title>
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__content">
+            <div class="header__info">
+                <i class="fa fa-phone mr-1"></i> <span class="mr-3">+456 123 7890</span>
+                <i class="fa fa-envelope mr-1"></i> <span>info@example.com</span>
+            </div>
+            <div class="header__social">
+                <ul class="mb-0">
+                    <li><a href="#"><i class="fab fa-facebook-f mr-1"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter mr-1"></i></a></li>
+                    <li><a href="#"><i class="fab fa-pinterest mr-1"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in mr-2"></i></a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <nav class="myNavbar navbar navbar-expand-lg navbar-light container p-0">
+            <a class="navbar__Logo navbar-brand" href="index.html">
+                <h1 class="mb-0">
+                    <i class="fa fa-book"></i>
+                    <span>INSTRUCTION</span>
+                    <p class="mb-0">EDUCATION</p>
+                </h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active p-3">
+                        <a class="nav-link nav__home" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link" href="#">ABOUT</a>
+                    </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link" href="#">SERVICES</a>
+                    </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link" href="#">GALLERY</a>
+                    </li>
+                    <li class="nav-item dropdown p-3">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pages
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Codes</a>
+                            <a class="dropdown-item" href="#">Icons</a>
+                        </div>
+                    </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- End header -->
+
+    <section class="myCarousel">
+        <div class="bd-example">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./images/banner1.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block carousel__cap">
+                            <h2>Graphic Work <span>Designing</span></h2>
+                            <p>Any successful career starts with good education. Together with us you will have deeper
+                                knowledge of the subjects</p>
+                            <button>Read More >></button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/banner2.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Financial Analyst <span>Course.</span></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <button>Read More >></button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/banner3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Digital Marketing <span>Course.</span></h2>
+                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <button>Read More >></button>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- End Carousel -->
+
+    <section class="category">
+        <div class="category__content content text-center container">
+            <h3>WELCOME TO EDUCATION</h3>
+            <p>When Climbing The Carrer Ladder</p>
+            <p class="text-secondary">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                minim veniam, sunt in culpa
+                qui officia deserunt mollit anim id est laboth. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur sunt in culpa qui .</p>
+        </div>
+        <div class="category__product row">
+            <div class="category__item col-md-4">
+                <i class="fa fa-desktop"></i>
+                <h4>Design Course</h4>
+                <ul>
+                    <li>
+                        <h5>FASHION DESIGN</h5>
+                        <p>Ncididunt ut labore et t enim ad minim.</p>
+                    </li>
+                    <li>
+                        <h5>INTERIOR DESIGN</h5>
+                        <p>Ncididunt ut labore et t enim ad minim.</p>
+                    </li>
+                    <li>
+                        <h5>GRAPHIC DESIGN</h5>
+                        <p>Ncididunt ut labore et t enim ad minim.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="category__item category__item2 col-md-4">
+                <i class="fa fa-arrows-alt"></i>
+                <h4>Marketing Course</h4>
+                <ul>
+                    <li>
+                        <h5>FACEBOOK MARKETING</h5>
+                        <p>Ncididunt ut labore et t enim ad minim.</p>
+                    </li>
+                    <li>
+                        <h5>YOUTUBE MARKETING</h5>
+                        <p>Ncididunt ut labore et t enim ad minim.</p>
+                    </li>
+                    <li>
+                        <h5>TWITTER MARKETING</h5>
+                        <p>Ncididunt ut labore et t enim ad minim.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="category__item col-md-4">
+                <i class="fa fa-chart-bar"></i>
+                <h4>Financial Course</h4>
+                <ul>
+                    <li>
+                        <h5>COMPLEXITIES OF BANKING</h5>
+                        <p>Ncididunt ut labore et t enim ad minim.</p>
+                    </li>
+                    <li>
+                        <h5>COMPLIANCE REGULATIONS</h5>
+                        <p>Ncididunt ut labore et t enim ad minim.</p>
+                    </li>
+                    <li>
+                        <h5>FINANCE PRODUCTS</h5>
+                        <p>Ncididunt ut labore et t enim ad minim.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- End category -->
+
+    <section class="number">
+        <div class="number__content">
+            <h3>OUR STATS</h3>
+            <p>When Climbing The Carrer Ladder</p>
+        </div>
+        <div class="row">
+            <div class="number__item col-md-3">
+                <i class="fa fa-graduation-cap"></i>
+                <p>Graduates</p>
+                <p class="counter">45</p>
+            </div>
+            <div class="number__item col-md-3 number__item2">
+                <i class="fa fa-user"></i>
+                <p>Certified Staff</p>
+                <p class="counter">165</p>
+            </div>
+            <div class="number__item col-md-3">
+                <i class="fa fa-users"></i>
+                <p>Student</p>
+                <p class="counter">563</p>
+            </div>
+            <div class="number__item col-md-3">
+                <i class="fa fa-trophy"></i>
+                <p>Awards</p>
+                <p class="counter">245</p>
+            </div>
+        </div>
+    </section>
+    <!-- End number -->
+
+    <section class="product container">
+        <div class="product__content content text-center">
+            <h3>WHAT WE OFFER</h3>
+            <p>When Climbing The Carrer Ladder</p>
+        </div>
+        <div class="row">
+            <div class="product__item col-md-4">
+                <div class="product__info">
+                    <i class="fa fa-graduation-cap"></i>
+                    <h4>UNDERGRADUATE STUDY</h4>
+                    <p class="text-secondary">Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste natus
+                        error sit voluptatem</p>
+                </div>
+            </div>
+            <div class="product__item col-md-4">
+                <div class="product__info">
+                    <i class="fa fa-book"></i>
+                    <h4>PROFESSIONAL STUDY</h4>
+                    <p class="text-secondary">Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste natus
+                        error sit voluptatem</p>
+                </div>
+            </div>
+            <div class="product__item col-md-4">
+                <div class="product__info"><i class="fa fa-tasks"></i>
+                    <h4>PROGRAMS</h4>
+                    <p class="text-secondary">Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste natus
+                        error sit voluptatem</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="product__item col-md-4">
+                <div class="product__info">
+                    <i class="fa fa-comment"></i>
+                    <h4>ONLINE LEARNING</h4>
+                    <p class="text-secondary">Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste natus
+                        error sit voluptatem</p>
+                </div>
+            </div>
+            <div class="product__item col-md-4">
+                <div class="product__info">
+                    <i class="fa fa-bookmark"></i>
+                    <h4>SUMMER SESSION</h4>
+                    <p class="text-secondary">Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste natus
+                        error sit voluptatem</p>
+                </div>
+            </div>
+            <div class="product__item col-md-4">
+                <div class="product__info">
+                    <i class="fa fa-globe-americas"></i>
+                    <h4>GLOBAL EDUCATION</h4>
+                    <p class="text-secondary">Lorem ipsum dolor sit amet, Sed ut perspiciatis unde omnis iste natus
+                        error sit voluptatem</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End product -->
+
+    <section class="test pt-5 mb-5">
+        <div class="test__content content text-center">
+            <h3>TESTIMONIALS</h3>
+            <p class="text-light">When Climbing The Carrer Ladder</p>
+        </div>
+        <div class="test__carousel container">
+            <div id="mytest" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#mytest" data-slide-to="0" class="active"></li>
+                    <li data-target="#mytest" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner container">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4 test__item">
+                                <div class="test__text">
+                                    <p>Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet
+                                        vehicula pellentesque.</p>
+                                </div>
+                                <div class="test__info row w-50">
+                                    <div class="test__img col-md-4 pl-0 pr-0">
+                                        <img src="./images/test1.jpg" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="test__name col-md-8 pr-0">
+                                        <h6>Mary Jane</h6>
+                                        <p>Vestibulum</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 test__item">
+                                <div class="test__text">
+                                    <p>Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet
+                                        vehicula pellentesque.</p>
+                                </div>
+                                <div class="test__info row w-50">
+                                    <div class="test__img col-md-4 pl-0 pr-0">
+                                        <img src="./images/test1.jpg" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="test__name col-md-8 pr-0">
+                                        <h6>Mary Jane</h6>
+                                        <p>Vestibulum</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 test__item">
+                                <div class="test__text">
+                                    <p>Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet
+                                        vehicula pellentesque.</p>
+                                </div>
+                                <div class="test__info row w-50">
+                                    <div class="test__img col-md-4 pl-0 pr-0">
+                                        <img src="./images/test1.jpg" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="test__name col-md-8 pr-0">
+                                        <h6>Mary Jane</h6>
+                                        <p>Vestibulum</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4 test__item">
+                                <div class="test__text">
+                                    <p>Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet
+                                        vehicula pellentesque.</p>
+                                </div>
+                                <div class="test__info row w-50">
+                                    <div class="test__img col-md-4 pl-0 pr-0">
+                                        <img src="./images/test1.jpg" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="test__name col-md-8 pr-0">
+                                        <h6>Mary Jane</h6>
+                                        <p>Vestibulum</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 test__item">
+                                <div class="test__text">
+                                    <p>Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet
+                                        vehicula pellentesque.</p>
+                                </div>
+                                <div class="test__info row w-50">
+                                    <div class="test__img col-md-4 pl-0 pr-0">
+                                        <img src="./images/test1.jpg" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="test__name col-md-8 pr-0">
+                                        <h6>Mary Jane</h6>
+                                        <p>Vestibulum</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 test__item">
+                                <div class="test__text">
+                                    <p>Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet
+                                        vehicula pellentesque.</p>
+                                </div>
+                                <div class="test__info row w-50">
+                                    <div class="test__img col-md-4 pl-0 pr-0">
+                                        <img src="./images/test1.jpg" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="test__name col-md-8 pr-0">
+                                        <h6>Mary Jane</h6>
+                                        <p>Vestibulum</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End test -->
+
+    <section class="new container pb-5">
+        <div class="new__content content text-center pb-5">
+            <h3>NEWS & EVENTS</h3>
+            <p>Exclusive Holidays For Any Travelers</p>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <img src="./images/g7.jpg" alt="" class="img-fluid img-thumbnail">
+            </div>
+            <div class="col-md-7">
+                <h4><a href="#">SIT AMET JUSTO VITAE</a></h4>
+                <p>3/01/2018</p>
+                <p class="text-secondary">Proin euismod vehicula vestibulum. Fusce ullamcorper aliquet dolor id egestas.
+                    Nulla leo purus,
+                    facilisis non cursus ut, egestas sed ipsum.Fusce ullamcorper aliquet dolor id egestas. Nulla leo
+                    purus, facilisis non cursus ut, egestas sed ipsum.Fusce ullamcorper aliquet dolor id egestas. Nulla
+                    leo purus, facilisis non cursus ut, egestas sed ipsum.</p>
+            </div>
+        </div>
+        <div class="row mt-md-5">
+            <div class="col-7">
+                <h4><a href="#">SIT AMET JUSTO VITAE</a></h4>
+                <p>3/01/2018</p>
+                <p class="text-secondary">Proin euismod vehicula vestibulum. Fusce ullamcorper aliquet dolor id egestas.
+                    Nulla leo purus,
+                    facilisis non cursus ut, egestas sed ipsum.Fusce ullamcorper aliquet dolor id egestas. Nulla leo
+                    purus, facilisis non cursus ut, egestas sed ipsum.Fusce ullamcorper aliquet dolor id egestas. Nulla
+                    leo purus, facilisis non cursus ut, egestas sed ipsum.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="./images/g10.jpg" alt="" class="img-fluid img-thumbnail">
+            </div>
+        </div>
+    </section>
+    <!-- End new -->
+
+    <footer class="footer">
+        <div class="footer__content container">
+            <div class="row">
+                <div class="footer__items footer__About col-md-4">
+                    <h4>About Us</h4>
+                    <p>Nam libero tempore cum vulputate id est id, pretium semper enim. Morbi viverra congue nisi vel
+                        pulvinar posuere sapien eros.</p>
+                </div>
+                <div class="footer__items footer__news col-md-4">
+                    <h4>Latest News</h4>
+                    <ul>
+                        <li><i class="fa fa-arrow-right"></i><a href="#">Lorem ipsum neque vulputate</a></li>
+                        <li><i class="fa fa-arrow-right"></i><a href="#">Dolor amet sed quam vitae</a></li>
+                        <li><i class="fa fa-arrow-right"></i><a href="#">Lorem ipsum neque, vulputate</a></li>
+                        <li><i class="fa fa-arrow-right"></i><a href="#">Dolor amet sed quam vitae</a></li>
+                        <li><i class="fa fa-arrow-right"></i><a href="#">Lorem ipsum neque, vulputate</a></li>
+                    </ul>
+                </div>
+                <div class="footer__items footer__contact col-md-4">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fa fa-map-marker-alt"></i>8088 USA, Honey block,
+                            New York City.</li>
+                        <li><i class="fa fa-envelope"></i><a href="#">info@example.com</a></li>
+                        <li><i class="fa fa-phone"></i>+09187 8088 9436</li>
+                    </ul>
+                </div>
+            </div>
+            <form action="">
+                <span class="pr-5 mb-5">Sign up for our Newsletter</span>
+                <input type="text" name="Email" placeholder="Enter Email Adress...">
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+        <div class="footer__copyright text-light text-center bg-dark pt-2 pb-2">
+            <p class="mb-0">© 2018 Instruction. All rights reserved | Design by <a href="#">W3layouts</a></p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- Countup -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="./js/jquery.countup.js"></script>
+    <script>
+        $('.counter').countUp();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+.products{
+    background-color: $bg-color-2;
+    // img{
+    //     width: 100%;
+    //     height: 100%;
+    // }
+    .products__content{
+        width: 90%;
+        margin:auto;
+    }
+    .row{
+        padding-top: $pd-60;
+        margin-right: 0;
+        .products__left{
+            .card-1{
+                border: none;
+                img{
+                    border-radius: 0;
+                    height: 100%;
+                }
+                .button{
+                    align-items: center;
+                    bottom: 10px;
+                    left: 50%;
+                    position: absolute;
+                    transform: translateX(-50%);
+                    a{
+                        width: 80px;
+                    }
+                }
+                .products__caption{
+                    width: 80%;
+                    margin: 0 auto;
+                    text-align: center;
+                    top: 45%;
+                    h5{
+                        @include text($color-blue-2, $fs-18, $fw-bold-0);
+                    }
+                    p{
+                        @include text($color-blue-2, $fs-14, $fw-normal);
+                    }
+                }
+                .products__caption2{
+                    width: 80%;
+                    margin: 0 auto;
+                    text-align: center;
+                    top: 45%;
+                    h5{
+                        @include text($color-white-0, $fs-18, $fw-bold-0);
+                    }
+                    p{
+                        @include text($color-white-0, $fs-14, $fw-normal);
+                    }
+                }
+            }
+        }
+        .products__right{
+            .card-2{
+                border: none;
+                img{
+                    border-radius: 0;
+                    height: 100%;
+                }
+                .products__caption1{
+                    width: 50%;
+                    margin: 0 auto;
+                    text-align: left;
+                    top: 25%;
+                    right:50%;
+                    h5{
+                        @include text($color-white-0, $fs-18, $fw-bold-0);
+                    }
+                    p{
+                        @include text($color-white-0, $fs-14, $fw-bold-0);
+                        background-color: $color-blue-1;
+                        padding: $pd-5;
+                        width: 50%;
+                        text-align: center;
+                    }
+                }
+            }
+            .button_1{
+                bottom: 25%;
+                left: 3%;
+                position: absolute;
+                width: 50%;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.myHeader{
+    .myNavbar{
+        background-color: $color-blue-1;
+        padding: 0;
+        .navbar-brand{
+            border-right: 1px solid $color-blue-border;
+            padding: $pd-5 + 1;
+            margin-right: 0;
+            img{
+                width: 75px;
+            }
+        }
+        .collapse__left{
+            ul li{
+                border-right: 1px solid $color-blue-border;
+                padding: $pd-15 $pd-20;
+                a{
+                    padding: $pd-3;
+                    @include text($color-white-0!important, $fs-14, $fw-2);
+                }
+                &:hover{
+                    background-color: $color-blue-5;
+                    cursor: pointer;
+                }
+            }
+        }
+        .collapse__right{
+            .nav-item_language{
+                border-right: 1px solid $color-blue-border;
+                border-left: 1px solid $color-blue-border;
+            }
+            ul li{
+                padding: $pd-15 $pd-20;
+                a{
+                    padding: $pd-3;
+                    @include text($color-white-0!important, $fs-14, $fw-2);
+                }
+            }
+        }
+    }
+}

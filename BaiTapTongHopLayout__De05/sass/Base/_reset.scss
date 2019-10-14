@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html body{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: $fs-3;
+    color: $color-black-0;
+    background-color: $color-white-0;
+    line-height: $line-height;
+}

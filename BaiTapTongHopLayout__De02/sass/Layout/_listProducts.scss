@@ -1,0 +1,115 @@
+.listProducts{
+    h3{
+        @include text($color-blue-2, $fs-60, $fw-0);
+        margin: 0;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .listProducts__navTab{
+        .nav{
+            width: 60%;
+            margin: auto;
+            padding: 20px 0;
+            justify-content: space-between;
+            border:none;
+            .nav-link{
+                &:hover{
+                    border: none;
+                }
+                &:focus{
+                    color: $color-blue-0;
+                }
+                @include text($color-blue-5, $fs-14, $fw-bold);
+                border: none;
+                text-decoration: none;
+            }
+            .nav-link.active{
+                border: none;
+                border-bottom: 5px solid $color-blue-0;
+            }
+        }
+        .tab-content{
+            .carousel{
+                .carousel-item{
+                    .carousel-caption{
+                        position: absolute;
+                        bottom: 10%;
+                        left: 5%;
+                        z-index: 10;
+                        right: 60%;
+                        color: #fff;
+                        text-align: left;
+                        align-items: center;
+                        .caption_top{
+                            padding-bottom: 60px;
+                            @include text($color-white-0, $fs-14, $fw-bold);
+                        }
+                        .caption_mid{
+                            padding-right: 60px;
+                            margin: auto;
+                            .caption_img{
+                                width: 60%;
+                                margin: auto;
+                                margin-bottom: 20px;
+                            }
+                            .info{
+                                @include text($color-white-0, $fs-14, $fw-normal);
+                                padding-right: 40px;
+                                padding-bottom: 20px;
+                            }
+                            .caption_priceLeft, .caption_priceRight{
+                                margin-bottom: 10px;
+                                p:nth-child(1){
+                                    @include text($color-white-0, $fs-24 + 10, $fw-normal);
+                                }
+                                p:nth-child(2){
+                                    @include text($color-white-0, $fs-14, $fw-bold);
+                                }
+                            }
+                        }
+                    }
+                }
+                .caption_bottom{
+                    position: absolute;
+                    bottom: 0%;
+                    left: 0%;
+                    z-index: 10;
+                    right: 55%;
+                    color: #fff;
+                    text-align: left;
+                    align-items: center;
+                    border-top: 1.5px solid #c4c4c4;
+                    p{
+                        @include text($color-white-0, $fs-14, $fw-bold);
+                    }
+                }
+                .carousel-control-prev, .carousel-control-next{
+                    width: 2%;
+                    opacity: 0.8;
+                    span{
+                        @include text($color-blue-5, $fs-24 + 20, $fw-normal);
+                        width: 100%;
+                        height: 80px;
+                        background: $bg-color-1;
+                        &:hover{
+                            @include text($color-blue-0, $fs-24 + 20, $fw-normal);
+                        }
+                        i{
+                            padding: $pd-15 0;
+                        }
+                    }
+                }
+                .btn_left{
+                    left: 0;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+                .btn_right{
+                    right: 0;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                }
+            }
+        }
+    }
+}
