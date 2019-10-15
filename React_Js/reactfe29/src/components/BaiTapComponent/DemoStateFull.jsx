@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 
 export default class DemoStateFull extends Component {
-    
     getTitle = (color) => {
-        //Xử lý .... trả về 1 object jsx 
+        //Xử lý .... trả về 1 object jsx
         //Định nghĩa css trong jsx => tham số dưới dạng object style
         let objectStyle = {color:color};
         //style = {giá trị object style}
