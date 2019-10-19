@@ -13,6 +13,7 @@ import DemoProps from './BaiTapProps/DemoProps';
 import SanPham from './BaiTapProps/SanPham';
 import SanPhamF from './BaiTapProps/SanPhamF';
 import BaiTapPropsCallback from './BaiTapProps/BaiTapPropsCallback';
+import BaiTapGioHang from './baiTapGioHang/BaiTapGioHang';
 
 function App() {
 
@@ -40,7 +41,8 @@ function App() {
         <SanPham sanPham={sanPham3}/>
         <SanPhamF sanPham={sanPham3}/>
       </div> */}
-      <BaiTapPropsCallback/>
+      {/* <BaiTapPropsCallback/> */}
+      <BaiTapGioHang/>
     </div>
   );
 }

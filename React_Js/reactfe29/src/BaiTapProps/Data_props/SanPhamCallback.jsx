@@ -10,6 +10,7 @@ export default class SanPhamCallback extends Component {
                     <h4 className="card-title">{sp.tenSP}</h4>
                     <p className="card-text">{sp.giaBan}</p>
                     <button type="button" class="btn btn-primary" onClick={() =>xemChiTiet(sp)}>Xem Chi Tiet</button>
+                    <button type="button" class="btn btn-danger ml-2" data-toggle="modal" data-target="#modelId">Thêm Giỏ hàng</button>
                 </div>
             </div>
         )

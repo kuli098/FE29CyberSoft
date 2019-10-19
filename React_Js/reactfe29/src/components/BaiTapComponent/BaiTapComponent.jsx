@@ -3,6 +3,7 @@ import Header from './Header';
 import Slider from './Slider';
 import ProductList from './ProductList';
 import Footer from './Footer';
+import Modal from './Modal';
 
 export default class BaiTapComponent extends Component {
     mangSanPham= [
@@ -12,14 +13,27 @@ export default class BaiTapComponent extends Component {
         {maSP: 4, tenSP:'Vivo',hinhAnh:'./img/sp_vivo850.png',gia: 4000},
     ]
 
+    constructor(props) {
+        super(props);
+        this.state={
+            sanPhamModal:{maSP: 1, tenSP:'Black berry',hinhAnh:'./img/sp_blackberry.png',gia: 1000},
+        }
+    }
+
+    xemChiTiet =(spDuocChon)=>{
+        this.setState({
+            sanPhamModal:spDuocChon
+        })
+    }
     render() {
         return (
             <div>
                 <Header />
                 <Slider />
                 <h3 className="text-center">BEST SMART PHONE</h3>
-                <ProductList mangSanPham ={this.mangSanPham}/>
+                <ProductList mangSanPham ={this.mangSanPham} xemChiTiet={this.xemChiTiet}/>
                 <Footer />
+                <Modal sanPhamModal={this.state.sanPhamModal}/>
             </div>
         )
     }

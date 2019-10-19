@@ -22,7 +22,7 @@ export default class BaiTapState extends Component {
     //         colorCar: './img/imgBlackCar.jpg'
     //     })
     // }
-    changColor = (imgSrc)=>{
+    changColor = (imgSrc) => {
         this.setState({
             colorCar: imgSrc
         })
@@ -36,9 +36,9 @@ export default class BaiTapState extends Component {
                         <img src={this.state.colorCar} alt className="w-75" />
                     </div>
                     <div classname="col-6">
-                        <button onClick={()=>{this.changColor('./img/imgRedCar.jpg')}} type="button" className="btn btn-danger">Red</button>
-                        <button onClick={()=>{this.changColor('./img/imgSilverCar.jpg')}}type="button" className="btn btn-secondary">Silver</button>
-                        <button onClick={()=>{this.changColor('./img/imgblackCar.jpg')}}type="button" className="btn btn-dark">Black</button>
+                        <button onClick={() => { this.changColor('./img/imgRedCar.jpg') }} type="button" className="btn btn-danger">Red</button>
+                        <button onClick={() => { this.changColor('./img/imgSilverCar.jpg') }} type="button" className="btn btn-secondary">Silver</button>
+                        <button onClick={() => { this.changColor('./img/imgblackCar.jpg') }} type="button" className="btn btn-dark">Black</button>
                     </div>
                 </div>
             </div>
