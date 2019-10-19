@@ -24,7 +24,7 @@ export default class ModalGioHang extends Component {
     render() {
         return (
             <div>
-                <div className="modal fade" id="modelId" tabIndex={-1} role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                <div className="modal fade" id="gioHangId" tabIndex={-1} role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                     <div className="modal-dialog" role="document" style={{ maxWidth: "900px", width: "900px" }}>
                         <div className="modal-content">
                             <div className="modal-header">

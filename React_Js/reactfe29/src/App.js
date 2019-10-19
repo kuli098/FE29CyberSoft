@@ -28,7 +28,7 @@ function App() {
       {/* <DemoStateFull /> */}
       {/* <Demo />
       <DemoStateFull /> */}
-      {/* <BaiTapComponent /> */}
+      <BaiTapComponent />
       {/* <DemoEvent/>
       <Login/>
       <BaiTapState/>

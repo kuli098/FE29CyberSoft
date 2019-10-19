@@ -4,7 +4,6 @@ import SanPhamGioHang from './SanPhamGioHang'
 export default class DanhSachSPGioHang extends Component {
     constructor(props) {
         super(props);
-
     }
     renderSanPham = () => {
         let {mangSanPham,xemChiTiet,themGioHang} = this.props;

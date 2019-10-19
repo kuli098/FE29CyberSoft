@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import DanhSachSPGioHang from './DanhSachSPGioHang'
 import data from '../BaiTapProps/Data_props/PhoneData.json'
-import ModalGioHang from './ModalGioHang';
+import ModalGioHang from './ModalGioHang'
 
 export default class BaiTapGioHang extends Component {
     constructor(props) {
@@ -21,7 +21,7 @@ export default class BaiTapGioHang extends Component {
             <div className="container">
                 <h3 className="text-success text-center">Danh sach san pham</h3>
                 <div className="text-right">
-                    <span className="text-danger" style={{ cursor: 'pointer', fontSize: '17px', fontWeight: 'bold' }} data-toggle="modal" data-target="#modelId">Giỏ Hàng ({tongSoLuong})</span>
+                    <span className="text-danger" style={{ cursor: 'pointer', fontSize: '17px', fontWeight: 'bold' }} data-toggle="modal" data-target="#gioHangId">Giỏ Hàng ({tongSoLuong})</span>
                 </div>
                 <DanhSachSPGioHang mangSanPham={this.mangSanPham} xemChiTiet={this.xemChiTiet} themGioHang={this.themGioHang} />
                 <div className="row">
