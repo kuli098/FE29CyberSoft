@@ -24,6 +24,7 @@ export default class BaiTapGioHang extends Component {
                     <span className="text-danger" style={{ cursor: 'pointer', fontSize: '17px', fontWeight: 'bold' }} data-toggle="modal" data-target="#gioHangId">Giỏ Hàng ({tongSoLuong})</span>
                 </div>
                 <DanhSachSPGioHang mangSanPham={this.mangSanPham} xemChiTiet={this.xemChiTiet} themGioHang={this.themGioHang} />
+                <ModalGioHang sanPhamModal={sanPhamModal} xoaGioHang={this.xoaGioHang} tangGiamSL={this.tangGiamSL} />
                 <div className="row">
                     <div className="col-4">
                         <h3>{sanPham.tenSP}</h3>
@@ -60,7 +61,6 @@ export default class BaiTapGioHang extends Component {
                         </table>
                     </div>
                 </div>
-                <ModalGioHang sanPhamModal={sanPhamModal} xoaGioHang={this.xoaGioHang} tangGiamSL={this.tangGiamSL} />
             </div>
         )
     }
@@ -77,14 +77,14 @@ export default class BaiTapGioHang extends Component {
             tenSP: spDuocChon.tenSP,
             giaBan: spDuocChon.giaBan,
             hinhAnh: spDuocChon.hinhAnh,
-            soLuong: 1
+            soLuong: 1,
         };
         let gioHangCapNhat = [...this.state.sanPhamModal];
         let index = gioHangCapNhat.findIndex(sp => sp.maSP === sanPhamGioHang.maSP);
-        if (index !== -1) {
+        if (index !== -1) {// san phẩm đã có trong giỏ hàng
             gioHangCapNhat[index].soLuong += 1;
         }
-        else {
+        else {// sản phẩm chưa có trong giỏ hàng
             gioHangCapNhat.push(sanPhamGioHang)
         }
         this.setState({
@@ -115,7 +115,6 @@ export default class BaiTapGioHang extends Component {
             {
                 gioHangCapNhat[index].soLuong -= 1;
             }
-
         this.setState({
             sanPhamModal: gioHangCapNhat
         })
