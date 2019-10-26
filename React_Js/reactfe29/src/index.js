@@ -8,6 +8,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import {rootReducer} from './redux/reducers/rootReducer.jsx';
 
+// tạo ra store tổng của ứng dụng
 const store = createStore(rootReducer);
 
 
