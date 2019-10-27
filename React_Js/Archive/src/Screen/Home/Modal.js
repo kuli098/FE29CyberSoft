@@ -18,7 +18,7 @@ class Modal extends Component {
         email: '',
         phone: '',
         type: '',
-      }
+      },
     };
   }
 
@@ -55,6 +55,11 @@ class Modal extends Component {
                     onChange={this.handleChange}
                     name="username"
                   />
+                  {
+                    this.state.error.username && (
+                      <p className="alert alert-danger">{this.state.error.username}</p>
+                      )
+                  }
                 </div>
                 <div className="form-group">
                   <label>Name</label>
@@ -64,6 +69,11 @@ class Modal extends Component {
                     onChange={this.handleChange}
                     name="name"
                   />
+                  {
+                    this.state.error.name && (
+                      <p className="alert alert-danger">{this.state.error.name}</p>
+                      )
+                  }
                 </div>
                 <div className="form-group">
                   <label>Email</label>
@@ -73,6 +83,11 @@ class Modal extends Component {
                     onChange={this.handleChange}
                     name="email"
                   />
+                  {
+                    this.state.error.email && (
+                      <p className="alert alert-danger">{this.state.error.email}</p>
+                      )
+                  }
                 </div>
                 <div className="form-group">
                   <label>Phone Number</label>
@@ -82,6 +97,11 @@ class Modal extends Component {
                     onChange={this.handleChange}
                     name="phone"
                   />
+                  {
+                    this.state.error.phone && (
+                      <p className="alert alert-danger">{this.state.error.phone}</p>
+                      )
+                  }
                 </div>
                 <div className="form-group">
                   <label>Type</label>
@@ -92,8 +112,12 @@ class Modal extends Component {
                     <option>Admin</option>
                     <option>User</option>
                   </select>
+                  {
+                    this.state.error.type && (
+                      <p className="alert alert-danger">{this.state.error.type}</p>
+                      )
+                  }
                 </div>
-
                 <button type="submit" className="btn btn-success">
                   Submit
                 </button>
@@ -106,14 +130,26 @@ class Modal extends Component {
   }
   handleChange = (event)=>{
     const errorMessage= validateAddUser(event.target.name, event.target.value);
-    console.log(errorMessage);
     this.setState({
-      user:{...this.state.user,[event.target.name]: event.target.value}
-    })
+      user:{...this.state.user,[event.target.name]: event.target.value},
+      error:{
+        ...this.state.error,[event.target.name]:errorMessage}
+    },)
   }
   handleSubmit = (event)=>{
     event.preventDefault();
-    console.log(this.state);
+    if(this.validateAll()){
+      console.log(this.state.user);
+    }
+  }
+  validateAll = ()=>{
+    //duyệt this.state.error (for in), neu 1 thuoc tinh  length >0 thi return false || true
+    for(let index in this.state.error){
+      if(this.state.user[index] === 0 || this.state.error[index].length >0)
+        return false;
+      //this.state.error[index] === this.state.error.username
+    }
+    return true;
   }
 }
 

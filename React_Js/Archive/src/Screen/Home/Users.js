@@ -1,22 +1,13 @@
 import React, { Component } from "react";
-import UserItem from './UserItem';
+import UserItem from "./UserItem";
 
 class Users extends Component {
-  renderUser = ()=>{
-    let {xoaUser} = this.props;
-    return this.props.userList.map((user,index)=>{
-      return (
-        // <tr>
-        //   <td>{user.username}</td>
-        //   <td>{user.name}</td>
-        //   <td>{user.email}</td>
-        //   <td>{user.phone}</td>
-        //   <td>{user.type}</td>
-        // </tr>
-        <UserItem user={user} key={index} xoaUser={xoaUser}/>
-      )
-    })
-  }
+  renderUser = () => {
+    let { xoaUser } = this.props;
+    return this.props.userList.map((user, index) => {
+      return <UserItem user={user} key={index} xoaUser={xoaUser} />;
+    });
+  };
   render() {
     return (
       <div>
@@ -31,9 +22,7 @@ class Users extends Component {
               <th>Type</th>
             </tr>
           </thead>
-          <tbody>
-            {this.renderUser()}
-          </tbody>
+          <tbody>{this.renderUser()}</tbody>
         </table>
       </div>
     );
