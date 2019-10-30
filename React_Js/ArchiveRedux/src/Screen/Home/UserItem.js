@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 class User extends Component {
   render() {
-    let {user} = this.props;
+    const {user} = this.props;
     return (
       <tr>
         <td></td>
@@ -16,16 +16,27 @@ class User extends Component {
         <td>
           <button className="btn btn-danger" onClick={() => this.xoaUser(user.username)}>Delete</button>
         </td>
+        <td>
+          <button className="btn btn-info" data-target="#modelId" data-toggle="modal" onClick ={() =>this.themUser()}>Update</button>
+        </td>
       </tr>
     );
   }
-  xoaUser = username =>{
+  xoaUser = (username) =>{
     const action ={
       type: 'xoa_user',
       payload: username,
     };
     this.props.dispatch(action);
   };
+  themUser = () =>{
+    // let {user} =this.props;
+    const action ={
+      type: 'sua_user',
+      payload: this.props.user,
+    };
+    this.props.dispatch(action);
+  }
 }
 
 export default connect()(User);
