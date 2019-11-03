@@ -17,7 +17,7 @@ class User extends Component {
           <button className="btn btn-danger" onClick={() => this.xoaUser(user.username)}>Delete</button>
         </td>
         <td>
-          <button className="btn btn-info" data-target="#modelId" data-toggle="modal" onClick ={() =>this.themUser()}>Update</button>
+          <button className="btn btn-info" data-target="#modelId" data-toggle="modal" onClick ={() =>this.suaUser()}>Update</button>
         </td>
       </tr>
     );
@@ -29,8 +29,7 @@ class User extends Component {
     };
     this.props.dispatch(action);
   };
-  themUser = () =>{
-    // let {user} =this.props;
+  suaUser = () =>{
     const action ={
       type: 'sua_user',
       payload: this.props.user,

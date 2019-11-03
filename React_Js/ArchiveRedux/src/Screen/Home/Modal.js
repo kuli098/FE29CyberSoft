@@ -22,13 +22,45 @@ class Modal extends Component {
       }
     };
   }
-  static getDerivedStateFromProps(nextProps, prevState) {
-    // console.log(nextProps);
-    if (nextProps.userUpdate.username !== prevState.user.username) {
-      return { ...prevState, user: nextProps.userUpdate };
+  // static getDerivedStateFromProps(nextProps, prevState) {
+  //   if (nextProps.userUpdate.username !== prevState.user.username) {
+  //     return { ...prevState, user: nextProps.userUpdate };
+  //   }
+  //   return prevState;
+  // }
+  handleChange = event => {
+    const errorMessage = validateAddUser(event.target.name, event.target.value);
+    this.setState({
+      user: { ...this.state.user, [event.target.name]: event.target.value },
+      error: {
+        ...this.state.error,
+        [event.target.name]: errorMessage
+      }
+    });
+  };
+  handleSubmit = event => {
+    event.preventDefault();
+    if (this.validateAll()) {
+      if(this.props.userUpdate.username){
+        return this.props.dispatch({
+          type: "sua_user",
+          payload: this.state.user
+        })
+      }
+      const action = {
+        type: "them_user",
+        payload: this.state.user
+      };
+      this.props.dispatch(action);
     }
-    return prevState;
-  }
+  };
+  validateAll = () => {
+    for (var index in this.state.error) {
+      if (this.state.user[index] === 0 || this.state.error[index].length > 0)
+        return false;
+    }
+    return true;
+  };
 
   render() {
     // const {username,name,email,phone,type} = this.props.userUpdate;
@@ -44,7 +76,7 @@ class Modal extends Component {
         <div className="modal-dialog" role="document">
           <div className="modal-content">
             <div className="modal-header">
-              <h5 className="modal-title">ADD USER</h5>
+              <h5 className="modal-title">{this.props.userUpdate ? 'Update User':'Add User'}</h5>
               <button
                 type="button"
                 className="close"
@@ -145,39 +177,6 @@ class Modal extends Component {
       </div>
     );
   }
-  handleChange = event => {
-    const errorMessage = validateAddUser(event.target.name, event.target.value);
-    this.setState({
-      user: { ...this.state.user, [event.target.name]: event.target.value },
-      error: {
-        ...this.state.error,
-        [event.target.name]: errorMessage
-      }
-    });
-  };
-  handleSubmit = event => {
-    event.preventDefault();
-    if (this.validateAll()) {
-      // 1: connect component with store
-      // 2: dispatch action
-      // 3: len userReducer xu ly
-      const action = {
-        type: "them_user",
-        payload: this.state.user
-      };
-      this.props.dispatch(action);
-      // 4: add user, neu email va username da ton tai thi kh cho tao
-    }
-  };
-  validateAll = () => {
-    //duyệt this.state.error (for in), neu 1 thuoc tinh length >0 thi return false || true
-    for (var index in this.state.error) {
-      if (this.state.user[index] === 0 || this.state.error[index].length > 0)
-        return false;
-      //this.state.error[index] === this.state.error.username
-    }
-    return true;
-  };
 }
 
 const mapStateToProps = state => {

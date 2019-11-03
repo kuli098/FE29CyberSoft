@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Search from "./Search";
 import Users from "./Users";
 import Modal from "./Modal";
+import { connect } from "react-redux";
+
 class Home extends Component {
   render() {
     return (
@@ -22,6 +24,12 @@ class Home extends Component {
       </div>
     );
   }
+  openAddModal = () =>{
+    this.props.dispatch({
+      type: 'set_sua_user',
+      payload: null,
+    });
+  };
 }
 
-export default Home;
+export default connect()(Home);
