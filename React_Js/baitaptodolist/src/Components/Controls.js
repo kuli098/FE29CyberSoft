@@ -18,12 +18,12 @@ export default class Controls extends Component {
                 <InitializeTask generateData={this.props.generateData}/>
 
                 {/* Add New Task */}
-                <AddNewTask />
+                <AddNewTask clearBeforeAddNewTask={this.props.clearBeforeAddNewTask} />
 
                 {/* Filter */}
                 <div className="px-3">
                     {/* Filter Progress */}
-                    <FilterProgress/>
+                    <FilterProgress changeFilterProgress={this.props.changeFilterProgress} />
 
                     {/* Filter label */}
                     <FilterLable/>
@@ -32,7 +32,7 @@ export default class Controls extends Component {
                     <FilterPriority/>
 
                     {/* Sort */}
-                    <Sort/>
+                    <Sort changeSortType={this.props.changeSortType} />
                 </div>
             </div>
         )

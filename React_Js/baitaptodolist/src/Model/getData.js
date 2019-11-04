@@ -11,9 +11,9 @@ for (let task of TaskData) {
     let labelArr = task.labelArr;
     let memberIdArr = task.memberIdArr;
     let status = task.status;
-    let decsription = task.decsription;
+    let description = task.description;
 
-    let newTask = new Task(id, name, priority, labelArr, memberIdArr, status, decsription);
+    let newTask = new Task(id, name, priority, labelArr, memberIdArr, status, description);
     listOfTask.addTask(newTask);
 }
 
