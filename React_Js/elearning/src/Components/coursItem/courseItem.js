@@ -2,15 +2,22 @@ import React, { Component } from "react";
 import classes from "./courseStyle.module.scss";
 export default class CourseItem extends Component {
   render() {
+    let { hinhAnh, tenKhoaHoc, moTa } = this.props.item;
     return (
       <div>
         <div className={classes.courseItem}>
-          <img src="" alt="..."></img>
-          <p>Tên Khoá học</p>
-          <span className="p-3">Mô tả</span>
-          <button className="btn btn-danger my-3">Xem chi tiết </button>
+          <img src={hinhAnh} alt="..."></img>
+          <p className="text-danger">{tenKhoaHoc}</p>
+          <span className="p-3">{this.shortenString(moTa)}</span>
+          <button className="btn btn-success my-1">Xem chi tiết </button>
         </div>
       </div>
     );
   }
+  shortenString = (string) => {
+    if(string && string.length > 100){
+      return string.substr(0,20) + "..."
+    }
+    return string
+  };
 }
