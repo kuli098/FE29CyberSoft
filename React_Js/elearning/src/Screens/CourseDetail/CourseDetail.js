@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import {fetchCourseDetail} from '../../redux/Action/action';
+import { fetchCourseDetail } from "../../redux/Action/action";
 
 // const courseService = new CourseService();
 class CourseDetail extends Component {
@@ -15,13 +15,12 @@ class CourseDetail extends Component {
     );
   }
   componentDidMount = () => {
-    this.props.dispatch(fetchCourseDetail())
-  }
+    this.props.dispatch(fetchCourseDetail());
+  };
 }
 const mapStateToProps = state => {
-    return {
-        courseDetail: state.courseDetail
-    };
+  return {
+    courseDetail: state.courseDetail
   };
+};
 export default connect(mapStateToProps)(CourseDetail);
-
