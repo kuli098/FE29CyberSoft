@@ -24,17 +24,32 @@ export default class Header extends Component {
           <div className="collapse navbar-collapse" id="collapsibleNavId">
             <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
               <li className="nav-item active">
-                <NavLink to="/Home" className="nav-link" activeClassName="bg-danger" href="#">
+                <NavLink
+                  to="/Home"
+                  className="nav-link"
+                  activeClassName="bg-danger"
+                  href="#"
+                >
                   Home <span className="sr-only">(current)</span>
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/coursedetail" className="nav-link" activeClassName="bg-danger" href="#">
+                <NavLink
+                  to="/coursedetail"
+                  className="nav-link"
+                  activeClassName="bg-danger"
+                  href="#"
+                >
                   CourseDetail
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/demohoc" className="nav-link" activeClassName="bg-danger" href="#">
+                <NavLink
+                  to="/demohoc"
+                  className="nav-link"
+                  activeClassName="bg-danger"
+                  href="#"
+                >
                   Demo HOC
                 </NavLink>
               </li>

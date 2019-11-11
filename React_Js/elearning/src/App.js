@@ -9,18 +9,28 @@ import { HomeTemplate } from "./Templates/HomeTemplate.js";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <HomeTemplate exact path="/home" Component={HomeScreen}></HomeTemplate>
-        <HomeTemplate
-          exact
-          path="/coursedetail"
-          Component={CourseDetail}
-        ></HomeTemplate>
-        <HomeTemplate exact path="/demohoc" Component={HOCDemo}></HomeTemplate>
-        <HomeTemplate exact path="/" Component={HomeScreen}></HomeTemplate>
-      </Switch>
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <Switch>
+          <HomeTemplate
+            exact
+            path="/home"
+            Component={HomeScreen}
+          ></HomeTemplate>
+          <HomeTemplate
+            exact
+            path="/coursedetail"
+            Component={CourseDetail}
+          ></HomeTemplate>
+          <HomeTemplate
+            exact
+            path="/demohoc"
+            Component={HOCDemo}
+          ></HomeTemplate>
+          <HomeTemplate exact path="/" Component={HomeScreen}></HomeTemplate>
+        </Switch>
+      </BrowserRouter>
+    </div>
   );
 }
 

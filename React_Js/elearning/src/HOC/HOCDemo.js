@@ -7,7 +7,7 @@ import FormKhoaHoc from "./FormKhoaHoc";
 
 class HOCDemo extends Component {
   state = {
-    Component: HOCModal({ Component: FormKhoaHoc, title: "them nguoi dung" })
+    Component: HOCModal({ Component: FormNguoiDung, title: "them nguoi dung" })
   };
   openPopup = formName => {
     //sau khi goi HOCModal => tra ve component giua giao dien Modal va body la  component truyen vao
@@ -15,7 +15,7 @@ class HOCDemo extends Component {
       Component: FormNguoiDung,
       title: "them nguoi dung"
     });
-    if (formName !== "FormNguoiDung") {
+    if (formName !== "FormKhoaHoc") {
       Component = HOCModal({
         Component: FormKhoaHoc,
         title: "them khoa hoc"
