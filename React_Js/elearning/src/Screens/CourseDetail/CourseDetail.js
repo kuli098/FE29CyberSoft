@@ -2,15 +2,15 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchCourseDetail } from "../../redux/Action/action";
 
-// const courseService = new CourseService();
 class CourseDetail extends Component {
   render() {
+    let {courseDetail} = this.props;
     return (
       <div>
-        <p>{this.props.courseDetail.maKhoaHoc}</p>
-        <p>{this.props.courseDetail.tenKhoaHoc}</p>
-        <p>{this.props.courseDetail.moTa}</p>
-        <img src={this.props.courseDetail.hinhAnh} alt=".."></img>
+        <p>{courseDetail.maKhoaHoc}</p>
+        <p>{courseDetail.tenKhoaHoc}</p>
+        <p>{courseDetail.moTa}</p>
+        <img src={courseDetail.hinhAnh} alt=".."></img>
       </div>
     );
   }

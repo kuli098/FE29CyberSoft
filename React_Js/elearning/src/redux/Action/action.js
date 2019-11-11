@@ -31,7 +31,6 @@ export const fetchCourse = () => {
     courseService
       .fetchCourse()
       .then(res => {
-        // let courseList =[];
         dispatch(reduxAction(FETCH_COURSE, res.data));
       })
       .catch(error => {

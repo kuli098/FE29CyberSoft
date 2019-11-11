@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 import classes from "./homeStyle.module.scss";
 import CourseItem from "../../Components/coursItem/courseItem";
-import CourseService from "../../Services/CourseService";
 import { fetchCourse } from "../../redux/Action/action";
-// import reduxAction from '../../redux/Action/action';
 import { connect } from "react-redux";
-// import {FETCH_COURSE} from '../../redux/Action/type'
-// const courseService = new CourseService();
 class HomeScreen extends Component {
   render() {
     return (

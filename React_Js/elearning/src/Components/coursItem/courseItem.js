@@ -4,7 +4,7 @@ export default class CourseItem extends Component {
   render() {
     let { hinhAnh, tenKhoaHoc, moTa } = this.props.item;
     return (
-      <div>
+      <div className="h-100">
         <div className={classes.courseItem}>
           <img src={hinhAnh} alt="..."></img>
           <p className="text-danger">{tenKhoaHoc}</p>

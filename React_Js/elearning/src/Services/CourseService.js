@@ -9,7 +9,7 @@ class CourseService {
     });
   };
   fetchCourse() {
-    Axios({
+    return Axios({
       url:
         "http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=GP01",
       method: "GET"
