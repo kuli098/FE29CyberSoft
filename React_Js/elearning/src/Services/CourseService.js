@@ -1,10 +1,9 @@
 import Axios from "axios";
 
 class CourseService {
-  fetchCourseDetail = () => {
+  fetchCourseDetail = (courseid) => {
     return Axios({
-      url:
-        "http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayThongTinKhoaHoc?maKhoaHoc=111",
+      url: `http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayThongTinKhoaHoc?maKhoaHoc=${courseid}`,
       method: "GET"
     });
   };

@@ -12,11 +12,10 @@ const reduxAction = (type, payload) => {
     payload: payload
   };
 };
-
-export const fetchCourseDetail = () => {
+export const fetchCourseDetail = (courseid) => {
   return dispatch => {
     courseService
-      .fetchCourseDetail()
+      .fetchCourseDetail(courseid)
       .then(res => {
         dispatch(reduxAction(FETCH_COURSE_DETAIL, res.data));
       })
@@ -25,7 +24,6 @@ export const fetchCourseDetail = () => {
       });
   };
 };
-
 export const fetchCourse = () => {
   return dispatch => {
     courseService

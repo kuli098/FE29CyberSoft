@@ -6,6 +6,7 @@ import { BrowserRouter, Switch } from "react-router-dom";
 // import Header from "./Layouts/header.js";
 import HOCDemo from "./HOC/HOCDemo.js";
 import { HomeTemplate } from "./Templates/HomeTemplate.js";
+import Login from "./Screens/Login/Login.js";
 
 function App() {
   return (
@@ -19,13 +20,18 @@ function App() {
           ></HomeTemplate>
           <HomeTemplate
             exact
-            path="/coursedetail"
+            path="/coursedetail/:courseid"
             Component={CourseDetail}
           ></HomeTemplate>
           <HomeTemplate
             exact
             path="/demohoc"
             Component={HOCDemo}
+          ></HomeTemplate>
+          <HomeTemplate
+            exact
+            path="/login"
+            Component={Login}
           ></HomeTemplate>
           <HomeTemplate exact path="/" Component={HomeScreen}></HomeTemplate>
         </Switch>

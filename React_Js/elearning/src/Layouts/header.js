@@ -25,22 +25,12 @@ export default class Header extends Component {
             <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
               <li className="nav-item active">
                 <NavLink
-                  to="/Home"
+                  to="/home"
                   className="nav-link"
                   activeClassName="bg-danger"
                   href="#"
                 >
                   Home <span className="sr-only">(current)</span>
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/coursedetail"
-                  className="nav-link"
-                  activeClassName="bg-danger"
-                  href="#"
-                >
-                  CourseDetail
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -51,6 +41,16 @@ export default class Header extends Component {
                   href="#"
                 >
                   Demo HOC
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/login"
+                  className="nav-link"
+                  activeClassName="bg-danger"
+                  href="#"
+                >
+                  Login
                 </NavLink>
               </li>
             </ul>

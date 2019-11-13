@@ -10,12 +10,13 @@ class CourseDetail extends Component {
         <p>{courseDetail.maKhoaHoc}</p>
         <p>{courseDetail.tenKhoaHoc}</p>
         <p>{courseDetail.moTa}</p>
-        <img src={courseDetail.hinhAnh} alt=".."></img>
+        <img src={courseDetail.hinhAnh} alt=".." width="200px"></img>
       </div>
     );
   }
   componentDidMount = () => {
-    this.props.dispatch(fetchCourseDetail());
+    const {courseid} = this.props.match.params;
+    this.props.dispatch(fetchCourseDetail(courseid));
   };
 }
 const mapStateToProps = state => {
