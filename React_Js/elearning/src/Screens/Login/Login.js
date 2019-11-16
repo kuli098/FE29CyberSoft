@@ -17,19 +17,19 @@ function Login(props) {
 
   let handleChange = event => {
     let { name, value } = event.target;
+    let errorMessage = "";
     let userLoginUpdate = { ...state.userLogin, [name]: value };
     let errorUpdate = { ...state.error, [name]: errorMessage };
     setState({
       ...state,
       userLogin: { ...state.userLogin, [name]: value }
     });
-    let errorMessage = "";
     if (value === "") {
       errorMessage = name + "is required";
     }
     setState({
       userLogin: userLoginUpdate,
-      error:errorUpdate
+      error: errorUpdate
     });
     console.log(state);
   };
@@ -37,7 +37,7 @@ function Login(props) {
     event.preventDefault();
     let valid = true;
     for (var errorName in state.error) {
-      if (state.error[errorName] != "") {
+      if (state.error[errorName] !== "") {
         valid = false;
       }
     }

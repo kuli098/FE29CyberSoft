@@ -1,4 +1,4 @@
-import { LOGIN } from "./type";
+// import { LOGIN } from "./type";
 import Axios from "axios";
 import { settings } from "../../Config/Settings";
 
