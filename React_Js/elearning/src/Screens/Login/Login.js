@@ -18,15 +18,15 @@ function Login(props) {
   let handleChange = event => {
     let { name, value } = event.target;
     let errorMessage = "";
-    let userLoginUpdate = { ...state.userLogin, [name]: value };
-    let errorUpdate = { ...state.error, [name]: errorMessage };
-    setState({
-      ...state,
-      userLogin: { ...state.userLogin, [name]: value }
-    });
+    // setState({
+    //   ...state,
+    //   userLogin: { ...state.userLogin, [name]: value }
+    // });
     if (value === "") {
       errorMessage = name + "is required";
     }
+    let userLoginUpdate = { ...state.userLogin, [name]: value };
+    let errorUpdate = { ...state.error, [name]: errorMessage };
     setState({
       userLogin: userLoginUpdate,
       error: errorUpdate
@@ -68,6 +68,7 @@ function Login(props) {
           className="form-control"
           onChange={handleChange}
         ></input>
+        <span className="text-danger">{state.error.matKhau}</span>
       </div>
       <div className="form-group">
         <button type="submit" className="btn btn-success">
@@ -77,5 +78,4 @@ function Login(props) {
     </form>
   );
 }
-
 export default connect()(Login);
