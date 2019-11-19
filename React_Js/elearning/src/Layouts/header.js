@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { connect } from "react-redux";
 
-class Header extends Component {
-  kiemTraStorage = () => {};
-
+export default class Header extends Component {
   render() {
     return (
       <div>
@@ -46,32 +43,33 @@ class Header extends Component {
                   Demo HOC
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/login"
+                  className="nav-link"
+                  activeClassName="bg-danger"
+                  href="#"
+                >
+                  Login
+                </NavLink>
+              </li>
             </ul>
-            <ul className="navbar-nav">
-              {this.props.credentials ? (
-                <li className="nav-item">
-                  <span className="nav-link text-danger">hello {this.props.credentials.hoTen} </span>
-                </li>
-              ) : (
-                <li className="nav-item">
-                  <NavLink
-                    to="/login"
-                    className="nav-link"
-                    activeClassName="bg-danger"
-                    href="#"
-                  >
-                    Login
-                  </NavLink>
-                </li>
-              )}
-            </ul>
+            <form className="form-inline my-2 my-lg-0">
+              <input
+                className="form-control mr-sm-2"
+                type="text"
+                placeholder="Search"
+              />
+              <button
+                className="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
           </div>
         </nav>
       </div>
     );
   }
 }
-const mapStateToProps = state => ({
-  credentials: state.user.credentials
-});
-export default connect(mapStateToProps)(Header);

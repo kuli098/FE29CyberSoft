@@ -1,17 +1,16 @@
-// import Axios from "axios";
-import { restConnector } from ".";
+import Axios from "axios";
 
 class CourseService {
   fetchCourseDetail = (courseid) => {
-    return restConnector({
-      url: `/api/QuanLyKhoaHoc/LayThongTinKhoaHoc?maKhoaHoc=${courseid}`,
+    return Axios({
+      url: `http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayThongTinKhoaHoc?maKhoaHoc=${courseid}`,
       method: "GET"
     });
   };
   fetchCourse() {
-    return restConnector({
+    return Axios({
       url:
-        "/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=GP01",
+        "http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=GP01",
       method: "GET"
     });
   }

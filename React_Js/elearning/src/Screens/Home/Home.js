@@ -22,22 +22,14 @@ class HomeScreen extends Component {
       </div>
     );
   }
-  componentDidMount(){
-    if (this.props.credentials) {
-      this.props.dispatch(fetchCourse());
-    }
-  }
-  componentDidUpdate(prevProps) {
-    if (this.props.credentials && !prevProps.credentials) {
-      this.props.dispatch(fetchCourse());
-    }
+  componentDidMount() {
+    this.props.dispatch(fetchCourse());
   }
 }
 
 const mapStateToProps = state => {
   return {
-    courseList: state.courseList,
-    credentials: state.user.credentials
+    courseList: state.courseList
   };
 };
 

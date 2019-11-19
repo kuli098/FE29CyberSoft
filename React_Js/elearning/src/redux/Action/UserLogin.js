@@ -1,27 +1,22 @@
-// import Axios from "axios";
+// import { LOGIN } from "./type";
+import Axios from "axios";
 import { settings } from "../../Config/Settings";
-import reduxAction from "./action";
-import { LOGIN } from "./type";
-import { restConnector } from "../../Services";
 
 export const UserLogin = userLogin => {
   return dispatch => {
-    restConnector({
+    Axios({
       method: "POST",
       url: settings.domain + "/api/QuanLyNguoiDung/DangNhap",
       data: userLogin,
+    //   headers:{
+    //       "Authorization":"Bearer" + localStorage.getItem(settings.token)
+    //   }
     })
       .then(res => {
-        // console.log(res.data);
-        // luu local
+        console.log(res.data);
+        // đăng nhập thành công thì lưu tt user vào localstorage để request về api yêu cầu
         localStorage.setItem(settings.userLogin, JSON.stringify(res.data));
         localStorage.setItem(settings.token, res.data.accessToken);
-
-        // lưu data lên store de render lai giao dien header
-        dispatch(reduxAction(LOGIN, res.data));
-
-        //bỏ token lên header của tất cả requet
-        restConnector.defaults.headers['Athorization'] = "Bearer" + res.data.accessToken
       })
       .catch(error => {
         console.log(error.response.data);
