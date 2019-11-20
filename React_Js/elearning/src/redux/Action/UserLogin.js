@@ -4,7 +4,7 @@ import reduxAction from "./action";
 import { LOGIN } from "./type";
 import { restConnector } from "../../Services";
 
-export const UserLogin = userLogin => {
+export const UserLogin = (userLogin,history) => {
   return dispatch => {
     restConnector({
       method: "POST",
@@ -21,7 +21,9 @@ export const UserLogin = userLogin => {
         dispatch(reduxAction(LOGIN, res.data));
 
         //bỏ token lên header của tất cả requet
-        restConnector.defaults.headers['Athorization'] = "Bearer" + res.data.accessToken
+        restConnector.defaults.headers['Athorization'] = "Bearer" + res.data.accessToken;
+        // chuyen toi trang home
+        history.push('/')
       })
       .catch(error => {
         console.log(error.response.data);

@@ -31,7 +31,7 @@ function Login(props) {
       userLogin: userLoginUpdate,
       error: errorUpdate
     });
-    console.log(state);
+    // console.log(state);
   };
   let handleSubmit = event => {
     event.preventDefault();
@@ -42,7 +42,8 @@ function Login(props) {
       }
     }
     if (valid) {
-      props.dispatch(UserLogin(state.userLogin)); // khi submit goi action (ajax) truyen vao data la userLogin tu nguoi dung
+      // khi submit goi action (ajax) truyen vao data la userLogin tu nguoi dung
+      props.dispatch(UserLogin(state.userLogin, props.history));
     } else {
       alert("du lieu kh hop le");
     }
