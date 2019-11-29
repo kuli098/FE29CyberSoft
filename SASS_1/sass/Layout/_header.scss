@@ -1,94 +1,112 @@
-.myNavbar{
-    position: fixed;
-    width: 100%;
-    z-index: 5;
-    // border-bottom: 1px solid $color-gray-3;
-    background-color: $color-white-0;
-    transition: all 0.5s;
-    &.headerClass{
-        border-bottom: 1px solid $color-blue;
+.myNavbar {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  // border-bottom: 1px solid $color-gray-3;
+  background-color: $color-white-0;
+  transition: all 0.5s;
+  &.headerClass {
+    padding: 0.7rem !important;
+  }
+  .navbar-brand {
+    flex-grow: 1;
+    img {
+      width: 110px;
     }
-    .navbar-brand{
-        flex-grow: 1;
-        img{
-            width: 110px;
+  }
+  .categories {
+    flex-grow: 1;
+    @include text($color-black-light, $fs-1, $fw-normal);
+    align-self: center;
+  }
+  .input__search {
+    flex-grow: 5;
+    .form-control {
+      background-color: $color-gray-1;
+      border: none;
+      transition: none;
+      &:focus {
+        box-shadow: none;
+        background-color: $color-white-0;
+        border-top: 1px solid $color-gray-3;
+        border-bottom: 1px solid $color-gray-3;
+        border-left: 1px solid $color-gray-3;
+      }
+      &:focus + .input-group-prepend {
+        .input-group-text {
+          color: $color-red-0;
+          background-color: $color-white-0;
+          background-color: $color-white-0;
+          border-top: 1px solid $color-gray-3;
+          border-bottom: 1px solid $color-gray-3;
+          border-right: 1px solid $color-gray-3;
         }
-    }
-    .categories{
-        flex-grow: 1;
-        @include text($color-black-light,$fs-1,$fw-normal);
-        align-self: center;
-    }
-    .input__search{
-        flex-grow: 5;
-        .form-control{
-            background-color: $color-gray-1;
-            border: none;
-            transition: none;
-            &:focus{
-                box-shadow: none;
-                background-color: $color-white-0;
-                border-top: 1px solid $color-gray-3;
-                border-bottom: 1px solid $color-gray-3;
-                border-left: 1px solid $color-gray-3;
-            }
-            &:focus + .input-group-prepend{
-                .input-group-text{
-                    color: $color-red-0;
-                    background-color: $color-white-0;
-                    background-color: $color-white-0;
-                    border-top: 1px solid $color-gray-3;
-                    border-bottom: 1px solid $color-gray-3;
-                    border-right: 1px solid $color-gray-3;
-                }
-                &:hover{
-                    .input-group-text{
-                        color: $color-white-0;
-                        background-color: $color-red-0;
-                    }
-                }
-            }
+        &:hover {
+          .input-group-text {
+            color: $color-white-0;
+            background-color: $color-red-0;
+          }
         }
-        .input-group-prepend{
-            .input-group-text{
-                background-color: $color-gray-1;
-                color: $color-red-0;
-                border: none;
-            }
-        }
+      }
     }
+    .input-group-prepend {
+      .input-group-text {
+        background-color: $color-gray-1;
+        color: $color-red-0;
+        border: none;
+      }
+    }
+  }
 
-    .navbar-nav{
-        justify-content: space-between;
-        width: 100%;
-        .nav-item{
-            .nav-link{
-                @include text($color-black-light, $fs-1, $fw-normal);
-                padding: $pd-1 $pd-1;
-            }
-            &:hover{
-                background-color: $color-gray-1;
-            }
-        }
-        .nav-item:nth-child(3){
-            border-radius: 50%;
-        }
+  .navbar-nav {
+    justify-content: flex-end;
+    width: 80%;
+    .nav-item {
+      .nav-link {
+        @include text($color-black-light, $fs-1 + 5, $fw-normal);
+        padding: $pd-1 $pd-1;
+      }
     }
-    @include reponsive('extra-large'){
-        .navbar-nav{
-            .bussiness, .instrucstor{
-                display: none;
-            }
-        }
+    .shopping_cart {
+      border-radius: 50%;
+      position: relative;
+      &:hover {
+        background-color: #e9e9e9;
+      }
+      .cart__number {
+        text-align: center;
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        line-height: 18px;
+        color: $color-white-0;
+        font-size: 0.7rem;
+        font-weight: bold;
+        background-color: $color-red-0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+      }
     }
-    @include reponsive('large'){
-        .categories, .input__search{
-            display: none;
-        }
+  }
+  @include reponsive("extra-large") {
+    .navbar-nav {
+      .home,
+      .course {
+        display: none;
+      }
     }
-    @include reponsive('medium'){
-        .categories, .input__search{
-            display: none;
-        }
+  }
+  @include reponsive("large") {
+    .categories,
+    .input__search {
+      display: none;
     }
+  }
+  @include reponsive("medium") {
+    .categories,
+    .input__search {
+      display: none;
+    }
+  }
 }
