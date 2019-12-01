@@ -7,11 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoDataBindingComponent implements OnInit {
   name: string = "nhan Nguyen";
+  email: string;
+  isDisabled = true;
+  phoneNumber: string;
+
   constructor() { }
 
   ngOnInit() { }
-  showMessage(): void{
+
+  showMessage(): void {
     alert('demo event binding')
   }
 
+  changeEmailHandler(event): void {
+    this.email = event.target.value;
+    console.log(this.email);
+  }
+
+  showUserName(username: string): void {
+    alert(username)
+  }
 }

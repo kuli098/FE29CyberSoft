@@ -132,7 +132,7 @@ html body {
       color: #fff; }
 
 .myIntro {
-  background: linear-gradient(to right, #521822, #ec5252); }
+  background: linear-gradient(to right, #992337, #ec5252); }
   .myIntro .intro__content {
     width: 80%;
     margin: auto;
@@ -293,7 +293,7 @@ html body {
   margin-top: 25px;
   background-color: #29303b; }
   .myBanner .banner__border {
-    background: linear-gradient(to right, #521822, #ec5252);
+    background: linear-gradient(to right, #992337, #ec5252);
     height: 8px; }
   .myBanner .banner__content {
     width: 90%;
@@ -495,7 +495,7 @@ html body {
   border: 1px solid #ec5252;
   border: none; }
   .button .btn__red:hover {
-    background-color: #521822;
+    background-color: #992337;
     color: #fff; }
 
 /*# sourceMappingURL=index.css.map */

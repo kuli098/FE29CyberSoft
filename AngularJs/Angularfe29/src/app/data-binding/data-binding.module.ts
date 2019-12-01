@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DemoDataBindingComponent } from './demo-data-binding/demo-data-binding.component';
+import { FormsModule } from '@angular/forms';
+import { BaiTapDataBindingComponent } from './bai-tap-data-binding/bai-tap-data-binding.component'
 
 
 
 @NgModule({
-  declarations: [DemoDataBindingComponent],
+  declarations: [DemoDataBindingComponent, BaiTapDataBindingComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
-  exports:[DemoDataBindingComponent]
+  exports: [DemoDataBindingComponent,BaiTapDataBindingComponent]
 })
 export class DataBindingModule { }

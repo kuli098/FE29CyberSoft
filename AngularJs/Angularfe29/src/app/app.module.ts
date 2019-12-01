@@ -16,6 +16,7 @@ import { Bt2cardComponent } from './bt2Buoi1/bt2card/bt2card.component';
 import { Bt2FooterComponent } from './bt2Buoi1/bt2-footer/bt2-footer.component';
 import { DetailModule } from './detail/detail.module';
 import { DataBindingModule } from './data-binding/data-binding.module';
+import { DirectiveModule } from './directive/directive.module';
 
 @NgModule({
   declarations: [
@@ -31,12 +32,13 @@ import { DataBindingModule } from './data-binding/data-binding.module';
     Bt2CarouselComponent,
     Bt2ContentComponent,
     Bt2cardComponent,
-    Bt2FooterComponent
+    Bt2FooterComponent,
   ],
   imports: [
     BrowserModule,
     DetailModule,
     DataBindingModule,
+    DirectiveModule
   ],
   providers: [],
   bootstrap: [AppComponent]

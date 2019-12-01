@@ -1,0 +1,21 @@
+<p *ngIf="isShowCybersoft; else elseContent">Hello Nhan</p>
+
+<ng-template #elseContent>
+  <p>Helo Zing Helth</p>
+</ng-template>
+
+<h1>Demo *ng-Switch && *ng-For</h1>
+<select (change)="changeMontHandler($event)">
+  <option>Chọn tháng</option>
+  <option [value]="n+1" *ngFor="let item of monthtArr; let n = index">{{
+    item
+  }}</option>
+</select>
+
+<div [ngSwitch]="month">
+  <p *ngSwitchCase="1">Tháng 1 có 31 ngày</p>
+  <p *ngSwitchCase="2">Tháng 2 có 28 ngày</p>
+  <p *ngSwitchCase="3">Tháng 3 có 31 ngày</p>
+  <p *ngSwitchCase="4">Tháng 4 có 30 ngày</p>
+  <p *ngSwitchDefault>Vui lòng chọn tháng</p>
+</div>

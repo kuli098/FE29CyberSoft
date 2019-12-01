@@ -1,5 +1,17 @@
 <p>{{ name }}</p>
-<input type="text" [value]="name" />
+<input type="text" [value]="name" disabled="isDisabled"/>
 <div [innerHTML]="name"></div>
 
 <button (click)="showMessage()">show message</button>
+<input type="text" id="email" (keyup)="changeEmailHandler($event)" />
+
+<p>Email người nhập: {{email}}</p>
+
+<h1>DEMO TWOWAY BINDING</h1>
+<input type="text" [(ngModel)]="phoneNumber"/>
+<p>Phone Number: {{phoneNumber}}</p>
+
+<h1>DEMO LOCAL REFERENCE</h1>
+<input #username type="text" id="userName">
+<br>
+<button class="btn btn-danger" (click)="showUserName(username.value)">Submit</button>
