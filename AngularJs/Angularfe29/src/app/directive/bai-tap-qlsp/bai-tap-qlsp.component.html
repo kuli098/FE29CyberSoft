@@ -1,0 +1,46 @@
+<div class="w-75 mx-auto">
+  <div>
+    <div class="form-group">
+      <label>Ma SP</label>
+      <input type="text" class="form-control" #maspRef />
+    </div>
+    <div class="form-group">
+      <label>Ten SP</label>
+      <input type="text" class="form-control" #tenspRef />
+    </div>
+    <div class="form-group">
+      <label>Gia</label>
+      <input type="text" class="form-control" #giaspRef />
+    </div>
+
+    <button
+      class="btn btn-success"
+      (click)="addProductHandler(maspRef.value, tenspRef.value, giaspRef.value)"
+    >
+      Them SP
+    </button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Ma</th>
+          <th>Ten</th>
+          <th>Gia</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of productsArr | paginate: { itemsPerPage: 5, currentPage: currentPage }; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.MaSP }}</td>
+          <td>{{ item.TenSP }}</td>
+          <td>{{ item.Gia }}</td>
+          <td>
+              <button type="button" class="btn btn-danger" (click)="deleteProductHandler(this.item.MaSP)">Xóa</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+  </div>
+</div>

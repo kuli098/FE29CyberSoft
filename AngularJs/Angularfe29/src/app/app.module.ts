@@ -17,6 +17,7 @@ import { Bt2FooterComponent } from './bt2Buoi1/bt2-footer/bt2-footer.component';
 import { DetailModule } from './detail/detail.module';
 import { DataBindingModule } from './data-binding/data-binding.module';
 import { DirectiveModule } from './directive/directive.module';
+import { ComponentInteractionModule } from './component-interaction/component-interaction.module';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { DirectiveModule } from './directive/directive.module';
     BrowserModule,
     DetailModule,
     DataBindingModule,
-    DirectiveModule
+    DirectiveModule,
+    ComponentInteractionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
