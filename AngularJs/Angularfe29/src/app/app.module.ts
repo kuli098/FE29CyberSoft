@@ -18,6 +18,7 @@ import { DetailModule } from './detail/detail.module';
 import { DataBindingModule } from './data-binding/data-binding.module';
 import { DirectiveModule } from './directive/directive.module';
 import { ComponentInteractionModule } from './component-interaction/component-interaction.module';
+import { DatGheXeBusModule } from './dat-ghe-xe-bus/dat-ghe-xe-bus.module';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { ComponentInteractionModule } from './component-interaction/component-in
     DataBindingModule,
     DirectiveModule,
     ComponentInteractionModule,
+    DatGheXeBusModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

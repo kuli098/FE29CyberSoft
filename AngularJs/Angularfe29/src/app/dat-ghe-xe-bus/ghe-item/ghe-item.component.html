@@ -1,0 +1,10 @@
+<button
+  class="btn btn-secondary m-2"
+  style="width: 40px;"
+  (click)="chooseSeat()"
+  [ngClass]="{ disableSeat: seatItem.TrangThai, 'btn-success':isBooking }"
+  [disabled]="seatItem.TrangThai"
+>
+  {{ seatItem.SoGhe }}
+</button>
+<!-- sử dụng ng-class để check trạng thái -->

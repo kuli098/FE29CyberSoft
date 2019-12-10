@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <app-title>Danh sách ghế</app-title>
+      <app-ghe-item
+        *ngFor="let item of seatArr"
+        [seat]="item"
+        (seatEmiter)="outputSeatHandler($event)"
+      ></app-ghe-item>
+    </div>
+    <div class="col-6">
+      <app-title>Danh sách ghế đã đặt</app-title>
+      <h1 class="display-4 text-center">
+        Danh sách ghế đã đặt ({{ bookingArr.length }})
+      </h1>
+      <p *ngFor="let item of bookingArr">
+        Ghế: {{ item?.SoGhe }} ${{ item?.Gia }}
+        <button class="btn btn-warning" (click)="deleteSeat(item.SoGhe)">
+          Hủy
+        </button>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- DEMO VIEWCHILD -->
+<input #demoInput type="text" />

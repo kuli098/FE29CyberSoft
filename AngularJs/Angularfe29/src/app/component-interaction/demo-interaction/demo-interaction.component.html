@@ -4,14 +4,17 @@
     <div class="col-8">
       <div class="row">
         <div class="col-4" *ngFor="let item of studentArr">
-          <app-student-item (studentEmitter)="outputStudentHandler($event)" [studentItem]="item"></app-student-item>
+          <app-student-item
+            (studentEmitter)="outputStudentHandler($event)"
+            [studentItem]="item"
+          ></app-student-item>
         </div>
       </div>
     </div>
     <div class="col-4">
-        <h2>Sinh viên được chọn</h2>
-        <p>Tên: {{choosenStudent?.name}} </p>
-        <p>Tuổi: {{choosenStudent?.age}}</p>
+      <h2>Sinh viên được chọn</h2>
+      <p>Tên: {{ choosenStudent?.name }}</p>
+      <p>Tuổi: {{ choosenStudent?.age }}</p>
     </div>
   </div>
 </div>

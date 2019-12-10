@@ -15,5 +15,4 @@ export class StudentItemComponent implements OnInit {
   chooseStudent(): void {
     this.studentEmitter.emit(this.studentItem);
   }
-
 }
