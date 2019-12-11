@@ -1,0 +1,41 @@
+<h1 class="display-4 text-center text-danger">Thêm phim</h1>
+<div class="px-3">
+  <div class="form-group">
+    <label>Mã Phim</label>
+    <input type="text" class="form-control" #maPhimRef />
+  </div>
+  <div class="form-group">
+    <label>Tên Phim</label>
+    <input type="text" class="form-control" #tenPhimRef />
+  </div>
+  <div class="form-group">
+    <label>Mô Tả</label>
+    <input type="text" class="form-control" #moTaRef />
+  </div>
+  <div class="form-group">
+    <label>Đánh Giá</label>
+    <input type="text" class="form-control" #danhGiaRef />
+  </div>
+  <div class="form-group">
+    <label>Hình Ảnh</label>
+    <input type="text" class="form-control" #hinhAnhRef />
+  </div>
+  <button
+    class="btn btn-success"
+    (click)="
+      addMovieHandler(
+        maPhimRef.value,
+        tenPhimRef.value,
+        moTaRef.value,
+        danhGiaRef.value,
+        hinhAnhRef.value
+      )
+    "
+  >
+    Thêm Phim
+  </button>
+  <button class="btn btn-danger" (click)="deleteMovieHandler()">Xóa</button>
+  <button class="btn btn-info" (click)="changeStatusHandler()">
+      Đổi trạng thái phim
+  </button>
+</div>
