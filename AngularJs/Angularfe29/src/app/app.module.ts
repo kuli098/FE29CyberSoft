@@ -19,8 +19,6 @@ import { DataBindingModule } from './data-binding/data-binding.module';
 import { DirectiveModule } from './directive/directive.module';
 import { ComponentInteractionModule } from './component-interaction/component-interaction.module';
 import { DatGheXeBusModule } from './dat-ghe-xe-bus/dat-ghe-xe-bus.module';
-import { DemoLifecycleModule } from './demo-lifecycle/demo-lifecycle.module';
-import { MovieManagementModule } from './movie-management/movie-management.module';
 
 @NgModule({
   declarations: [
@@ -45,8 +43,6 @@ import { MovieManagementModule } from './movie-management/movie-management.modul
     DirectiveModule,
     ComponentInteractionModule,
     DatGheXeBusModule,
-    DemoLifecycleModule,
-    MovieManagementModule
   ],
   providers: [],
   bootstrap: [AppComponent]
