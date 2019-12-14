@@ -21,6 +21,9 @@ import { ComponentInteractionModule } from './component-interaction/component-in
 import { DatGheXeBusModule } from './dat-ghe-xe-bus/dat-ghe-xe-bus.module';
 import { DemoLifecycleModule } from './demo-lifecycle/demo-lifecycle.module';
 import { MovieManagementModule } from './movie-management/movie-management.module';
+import { HomeModule } from './Movie-project/home/home.module';
+import { MovieDetailModule } from './Movie-project/detail/detail.module'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { MovieManagementModule } from './movie-management/movie-management.modul
     ComponentInteractionModule,
     DatGheXeBusModule,
     DemoLifecycleModule,
-    MovieManagementModule
+    MovieManagementModule,
+    HomeModule,
+    MovieDetailModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
