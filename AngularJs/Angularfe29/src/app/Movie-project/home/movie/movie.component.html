@@ -5,7 +5,11 @@
     <p class="card-text lead">
       {{ movieItem?.moTa.substr(0, 60) + "..." | lowercase }}
     </p>
-    <p class="card-text">{{movieItem?.ngayKhoiChieu |date: 'dd/MM/yy - mm:hh'}}</p>
-    <button class="btn btn-success">Đặt vé</button>
+    <p class="card-text">
+      {{ movieItem?.ngayKhoiChieu | date: "dd/MM/yy - mm:hh" }}
+    </p>
+    <button class="btn btn-success" [routerLink]="'/detail/' + movieItem.maPhim">
+      Đặt vé
+    </button>
   </div>
 </div>

@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Movie</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a routerLink="/" class="nav-link">Home</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <span class="nav-link" *ngIf="credentials; else authSection">Hi,{{credentials.hoTen}} </span>
+      </li>
+      <ng-template #authSection>
+        <li class="nav-item">
+          <a routerLink="/signin" class="nav-link text-danger">SignIn</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/signup" class="nav-link text-success">SignsUp</a>
+        </li>
+      </ng-template>
+    </ul>
+  </div>
+</nav>

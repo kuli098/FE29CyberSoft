@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 // import { HttpClient } from '@angular/common/http';
 import { MovieService, ImovieDetail } from "src/app/Services/movie.service";
 import { MovieGateway } from "src/app/gateways/movie.gateway";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-detail-index",
@@ -13,7 +14,8 @@ export class DetailIndexComponent implements OnInit {
 
   constructor(
     private _movieGateway: MovieGateway,
-    private _movieServides: MovieService
+    private _movieServides: MovieService,
+    private _activatedRoute: ActivatedRoute
   ) {}
 
   ngOnInit() {
@@ -26,15 +28,17 @@ export class DetailIndexComponent implements OnInit {
         this.movieItem = newMovieItem;
       }
     );
-
-    this._movieGateway.fetMovieDetail().subscribe(
-      (res: ImovieDetail) => {
-        console.log(res);
-        this._movieServides.setMovieItem(res);
-      },
-      err => {
-        console.log(err);
-      }
-    );
+    //get params from url
+    this._activatedRoute.params.subscribe(params => {
+      this._movieGateway.fetMovieDetail(params.id).subscribe(
+        (res: ImovieDetail) => {
+          console.log(res);
+          this._movieServides.setMovieItem(res);
+        },
+        err => {
+          console.log(err);
+        }
+      );
+    });
   }
 }

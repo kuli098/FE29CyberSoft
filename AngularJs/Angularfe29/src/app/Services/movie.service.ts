@@ -6,7 +6,7 @@ export interface IMovie {
   moTa?: string, //thêm dấu chấm hỏi để khi sử dụng interface thì có thể kh cần đến mô tả.
   danhGia: string,
   hinhAnh: string,
-  ngayKhoiChieu: Date;
+  ngayKhoiChieu?: Date;
 }
 
 export interface ImovieDetail extends IMovie {
